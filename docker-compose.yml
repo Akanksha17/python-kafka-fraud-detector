@@ -1,7 +1,12 @@
 version: "3"
 
 services:
-#  pass
+  generator:
+    build: ./generator
+    environment:
+      KAFKA_BROKER_URL: broker:9092
+      TRANSACTIONS_TOPIC: queueing.transactions,
+      TRANSACTIONS_PER_SECOND: 1000
 
 networks:
   default:

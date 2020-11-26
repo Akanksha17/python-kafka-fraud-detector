@@ -1,8 +1,8 @@
-FROM python:3.9
+FROM python:3.6
 
 WORKDIR /usr/app
 ADD ./requirements.txt ./
 RUN pip install -r requirements.txt
 ADD ./ ./
 
-CMD ['python', 'app.py']
+CMD ["python3", "app.py"]
